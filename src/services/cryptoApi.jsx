@@ -28,7 +28,11 @@ const CryptoApi = () => {
   const cryptoNewsApi = {
     method: "GET",
     url: "https://bing-news-search1.p.rapidapi.com/news",
-    params: { safeSearch: "Off", textFormat: "Raw" },
+    params: {
+      category: "ScienceAndTechnology",
+      safeSearch: "Off",
+      textFormat: "Raw",
+    },
     headers: {
       "X-BingApis-SDK": "true",
       "X-RapidAPI-Key": "077c4459c1msh0272762d3c0b820p1727ebjsn02ee8905d264",
