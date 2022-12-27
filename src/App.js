@@ -10,9 +10,11 @@ import News from "./pages/News";
 import { Circles } from "react-loader-spinner";
 import { useState } from "react";
 import "./styles/index.css";
+import useScrollToTop from "./hooks/useScrollToTop";
 
 function App() {
   const [loading, setLoading] = useState(false);
+  useScrollToTop()
   return (
     <div className="app">
       <CryptoApi />
