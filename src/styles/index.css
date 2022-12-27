@@ -32,6 +32,7 @@ a:hover {
   width: 100%;
   padding-left: 258px;
 }
+
 .routes {
   padding: 20px;
 }
@@ -64,9 +65,11 @@ a:hover {
   position: absolute !important;
   right: 10px !important;
   top: 25px !important;
-  font-size: 1.2rem !important;
-  background-color: var(--bgSecondary) !important;
+  font-size: 20px !important;
   border: none !important;
+  fill: #fff;
+  color: #fff;
+  cursor: pointer;
 }
 
 .loader {
@@ -74,24 +77,6 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-@media screen and (max-width: 1300px) {
-  .main {
-    margin-left: 50px;
-  }
-}
-
-@media screen and (max-width: 1170px) {
-  .main {
-    margin-left: 50px;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .main {
-    margin-left: 100px;
-  }
 }
 
 @media screen and (max-width: 800px) {
@@ -405,4 +390,25 @@ a:hover {
 
 .ant-card {
   box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 800px) {
+  .main {
+    padding-left: 0px;
+    margin-left: 0px;
+  }
+}
+.switch__chart-bar.active,
+.switch__chart-line.active {
+  color: #0071bd;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+.switch__chart-bar,
+.switch__chart-line {
+  color: #000;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+.ant-switch-inner {
+  background-color: #0071bd !important;
 }

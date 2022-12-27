@@ -5,11 +5,14 @@ import Home from "./pages/Home";
 import Exchanges from "./pages/Exchanges";
 import Crypto from "./pages/CryptoCurrencies";
 import CryptoDetails from "./pages/CryptoDetails";
-import "./styles/index.css";
-import Footer from "./components/Footer";
 import CryptoApi from "./services/cryptoApi";
+import News from "./pages/News";
+import { Circles } from "react-loader-spinner";
+import { useState } from "react";
+import "./styles/index.css";
 
 function App() {
+  const [loading, setLoading] = useState(false);
   return (
     <div className="app">
       <CryptoApi />
@@ -17,12 +20,29 @@ function App() {
       <div className="main">
         <Layout>
           <div className="routes">
-            <Routes>
-              <Route exact path="/" element={<Home />} />
-              <Route exact path="/exchanges" element={<Exchanges />} />
-              <Route exact path="/cryptocurrencies" element={<Crypto />} />
-              <Route exact path="/crypto/:id" element={<CryptoDetails />} />
-            </Routes>
+            {loading ? (
+              <div className="loader__wrapper">
+                <Circles
+                  className="circles"
+                  height="80"
+                  width="80"
+                  ariaLabel="loading"
+                  color="#0071bd"
+                />
+              </div>
+            ) : (
+              <Routes>
+                <Route exact path="/" element={<Home />} />
+                <Route exact path="/exchanges" element={<Exchanges />} />
+                <Route exact path="/news" element={<News />} />
+                <Route exact path="/cryptocurrencies" element={<Crypto />} />
+                <Route
+                  exact
+                  path="/crypto/:id"
+                  element={<CryptoDetails setLoading={setLoading} />}
+                />
+              </Routes>
+            )}
           </div>
         </Layout>
       </div>
