@@ -5,10 +5,7 @@ import { Circles } from "react-loader-spinner";
 import { useEffect, useState } from "react";
 import { setCryptoNews } from "../redux/reducer/cryptoNews.reducer";
 import { setCryptoExchanges } from "../redux/reducer/cryptoExchanges.reducer";
-import {
-  REACT_APP_CRYPTO_RAPIDAPI_HOST,
-  REACT_APP_RAPIDAPI_KEY,
-} from "../constants/ApiKey";
+import { REACT_APP_CRYPTO_RAPIDAPI_HOST, REACT_APP_RAPIDAPI_KEY, REACT__APP_NEWS_RAPIDAPI_HOST } from "../constants/ApiKey";
 
 const CryptoApi = () => {
   const [loading, setLoading] = useState(false);
@@ -41,7 +38,7 @@ const CryptoApi = () => {
     headers: {
       "X-BingApis-SDK": "true",
       "X-RapidAPI-Key": REACT_APP_RAPIDAPI_KEY,
-      "X-RapidAPI-Host": REACT_APP_CRYPTO_RAPIDAPI_HOST,
+      "X-RapidAPI-Host": REACT__APP_NEWS_RAPIDAPI_HOST,
     },
   };
   const cryptoExchangesApi = {
