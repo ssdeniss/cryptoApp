@@ -7,6 +7,7 @@ import { Col, Row, Select } from "antd";
 import LineChart from "../components/LineChart";
 import { GenericStats, Stats } from "../constants/Constants";
 import { setCryptoCoinHistory } from "../redux/reducer/cryptoCoinHistory.reducer";
+import { REACT_APP_CRYPTO_RAPIDAPI_HOST, REACT_APP_RAPIDAPI_KEY } from "../constants/ApiKey";
 const { Option } = Select;
 
 const CryptoDetails = ({ setLoading }) => {
@@ -32,8 +33,8 @@ const CryptoDetails = ({ setLoading }) => {
       }/history`,
       params: { referenceCurrencyUuid: "yhjMzLPhuIDl", timePeriod: timeperiod },
       headers: {
-        "X-RapidAPI-Key": "077c4459c1msh0272762d3c0b820p1727ebjsn02ee8905d264",
-        "X-RapidAPI-Host": "coinranking1.p.rapidapi.com",
+        "X-RapidAPI-Key": REACT_APP_RAPIDAPI_KEY,
+        "X-RapidAPI-Host": REACT_APP_CRYPTO_RAPIDAPI_HOST,
       },
     };
     const cryptoCoinsApi = {
@@ -50,8 +51,8 @@ const CryptoDetails = ({ setLoading }) => {
         offset: "0",
       },
       headers: {
-        "X-RapidAPI-Key": "077c4459c1msh0272762d3c0b820p1727ebjsn02ee8905d264",
-        "X-RapidAPI-Host": "coinranking1.p.rapidapi.com",
+        "X-RapidAPI-Key": REACT_APP_RAPIDAPI_KEY,
+        "X-RapidAPI-Host": REACT_APP_CRYPTO_RAPIDAPI_HOST,
       },
     };
     axios

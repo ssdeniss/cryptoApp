@@ -5,6 +5,10 @@ import { Circles } from "react-loader-spinner";
 import { useEffect, useState } from "react";
 import { setCryptoNews } from "../redux/reducer/cryptoNews.reducer";
 import { setCryptoExchanges } from "../redux/reducer/cryptoExchanges.reducer";
+import {
+  REACT_APP_CRYPTO_RAPIDAPI_HOST,
+  REACT_APP_RAPIDAPI_KEY,
+} from "../constants/ApiKey";
 
 const CryptoApi = () => {
   const [loading, setLoading] = useState(false);
@@ -22,8 +26,8 @@ const CryptoApi = () => {
       offset: "0",
     },
     headers: {
-      "X-RapidAPI-Key": "077c4459c1msh0272762d3c0b820p1727ebjsn02ee8905d264",
-      "X-RapidAPI-Host": "coinranking1.p.rapidapi.com",
+      "X-RapidAPI-Key": REACT_APP_RAPIDAPI_KEY,
+      "X-RapidAPI-Host": REACT_APP_CRYPTO_RAPIDAPI_HOST,
     },
   };
   const cryptoNewsApi = {
@@ -36,8 +40,8 @@ const CryptoApi = () => {
     },
     headers: {
       "X-BingApis-SDK": "true",
-      "X-RapidAPI-Key": "077c4459c1msh0272762d3c0b820p1727ebjsn02ee8905d264",
-      "X-RapidAPI-Host": "bing-news-search1.p.rapidapi.com",
+      "X-RapidAPI-Key": REACT_APP_RAPIDAPI_KEY,
+      "X-RapidAPI-Host": REACT_APP_CRYPTO_RAPIDAPI_HOST,
     },
   };
   const cryptoExchangesApi = {
@@ -51,8 +55,8 @@ const CryptoApi = () => {
       orderDirection: "desc",
     },
     headers: {
-      "X-RapidAPI-Key": "077c4459c1msh0272762d3c0b820p1727ebjsn02ee8905d264",
-      "X-RapidAPI-Host": "coinranking1.p.rapidapi.com",
+      "X-RapidAPI-Key": REACT_APP_RAPIDAPI_KEY,
+      "X-RapidAPI-Host": REACT_APP_CRYPTO_RAPIDAPI_HOST,
     },
   };
   const cryptoCoinsRequest = () => {
