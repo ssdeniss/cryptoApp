@@ -1,80 +1,49 @@
-⭐ RapidAPI - https://rapidapi.com/hub?utm_source=youtube.com%2FJavaScriptMastery&utm_medium=DevRel&utm_campaign=DevRel
+# CryptoApp
 
-⭐ CoinRanking API - https://rapidapi.com/Coinranking/api/coinranking1?utm_source=youtube.com%2FJavaScriptMastery&utm_medium=DevRel&utm_campaign=DevRel
+CryptoApp is a React dashboard for exploring cryptocurrency market information and related news. It combines market data from CoinRanking with news results from Bing News Search through RapidAPI.
 
-⭐ Bing News Search - https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1?utm_source=youtube.com%2FJavaScriptMastery&utm_medium=DevRel&utm_campaign=DevRel
+## Features
 
-# Getting Started with Create React App
+- Browse cryptocurrency rankings and market statistics
+- Open detailed information for individual currencies
+- Search and filter available cryptocurrencies
+- Read recent cryptocurrency news
+- Navigate through a responsive Ant Design interface
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Data providers
 
-## Available Scripts
+The application uses APIs available through [RapidAPI](https://rapidapi.com/hub):
 
-In the project directory, you can run:
+- [CoinRanking API](https://rapidapi.com/Coinranking/api/coinranking1) for cryptocurrency data
+- [Bing News Search](https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1) for related news
 
-### `npm start`
+You need valid RapidAPI credentials before the live data requests can succeed. Keep credentials in local environment configuration and never commit private API keys to the repository.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Run locally
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+You need a current Node.js installation and npm.
 
-### `npm test`
+```bash
+git clone https://github.com/ssdeniss/cryptoApp.git
+cd cryptoApp
+npm install
+npm start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The development server is available at [http://localhost:3000](http://localhost:3000).
 
-### `npm run build`
+## Available scripts
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- `npm start` starts the development server.
+- `npm test` runs the test suite in watch mode.
+- `npm run build` creates an optimized production build.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- `src/components` contains reusable interface components.
+- `src/services` contains API configuration and data requests.
+- `src/App.js` assembles the main application routes and layout.
 
-### `npm run eject`
+## Contributing
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-
-
-
+Create a focused branch, keep API credentials out of commits, and open a pull request that explains the change and how it was verified.
